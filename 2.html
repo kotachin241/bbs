@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">ホーム</a></li>
+        <li><a href="form1.html">お問い合わせ</a></li>
+        <li><a href="news.html">ニュース</a></li>
+        <li><a href="kiyaku.html">利用規約</a></li>
+      </ul>
+    </nav>
+  </header>
+    <style>
+            body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+header {
+  background-color: #4285F4;
+  padding: 10px;
+  text-align: center;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+main {
+  padding: 20px;
+  background-color: #f1f1f1;
+}
+
+section {
+  margin-bottom: 20px;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  padding: 10px;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+  color: #4285F4;
+}
+
+.person img {
+  width: 480px;
+  height: 270px; 
+}
+
+/* 画像サイズのやつ */
+img {
+  width: 50%; /* 画像を親要素の幅 */
+  height: auto; /* 高さ調整 */
+}
+
+/* モバイル */
+@media (max-width: 480px) {
+  img {
+    max-width: 100%; /* 画像の最大制限 */
+  }
+}
+@media (max-width: 500px) {
+.container {
+max-width: 100%;
+padding: 10px;
+}
+}
+.blue-date {
+    display: inline-block;
+        padding: 5px 10px;
+        border-radius: 5px;
+        background-color: #007bff;
+        color: white;
+        font-weight: bold;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+    }
+    </style>
+    <meta charset="UTF-8">
+    <title>キッズなんでも掲示板</title>
+</head>
+<body>
+  <h1>キッズなんでも掲示板</h1>
+<section>
+  <div class="1">
+  <h1>ツイッターよりこれおもろいｗ</h1>
+  </div>
+  <div>
+  <small>名前 田端たかとさん 2023 7/12 12:54</small><BR>
+    ついったーよりおもろいｗｗ
+</div>
+<BR>
+  <BR>
+    <div>
+      <small>名前 やまだゆうと８さいさん 2023 7/12 8:59</small><BR>
+        たかとがっこういけｗｗｗ
+    </div>
+    <BR><BR>
+<div>
+  <small>名前 ニラレバさん 2023 7/12 10:47</small><BR>  
+  暇だなあ
+</div>
+<BR><BR>
+  <div>
+    <small>名前 もどちんさん 2023 7/19 10:26</small><BR>  
+      暇なら働こう
+  </div>
+</section>
+<section>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f1f1f1;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #ffffff;
+      border: 1px solid #e0e0e0;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #e0e0e0;
+      border-radius: 4px;
+    }
+
+    textarea {
+      resize: vertical;
+      height: 120px;
+    }
+
+    input[type="submit"] {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      background-color: #4285F4;
+      color: #ffffff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #3367D6;
+    }
+
+    .success-message {
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      display: none;
+    }
+
+    .info-message {
+      text-align: center;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .back-button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      background-color: #4285F4;
+      color: #ffffff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      text-align: center;
+      font-weight: bold;
+      text-decoration: none;
+      margin-top: 20px;
+    }
+
+    .back-button:hover {
+      background-color: #3367D6;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    @media (max-width: 500px) {
+  .container {
+    max-width: 100%;
+    padding: 10px;
+  }
+}
+
+  </style>
+<div class="container">
+  <h1>このスレッドに返信</h1>
+  <div id="contactFormContainer">
+    <form id="contactForm" action="#" method="POST">
+      <label for="name">名前</label>
+      <input type="text" id="name" name="name" required placeholder="名前">
+
+      <label for="message">返信の本文</label>
+      <textarea id="message" name="message" required placeholder="お問い合わせ内容を入力してください"></textarea>
+
+      <input type="submit" value="送信" id="submitButton">
+    </form>
+  </div>
+  <div id="successContainer" class="hidden">
+    <p class="success-message">返信が完了しました。</p>
+    <p class="info-message">返信が完了しました<BR>返信の反映には数分から数時間かかります。<br>反映までお時間をいただくことがあります。ご了承ください。<br>どうぞよろしくお願いいたします。</p>
+    <a href="2.html" class="back-button">ホームに戻る</a>
+  </div>
+</div>
+<script>
+const form = document.getElementById('contactForm');
+const submitButton = document.getElementById('submitButton');
+const successContainer = document.getElementById('successContainer');
+const contactFormContainer = document.getElementById('contactFormContainer');
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  // IPアドレスを取得する関数を呼び出す
+  getIpAddress((ipAddress) => {
+    const name = document.getElementById('name').value;
+    const message = document.getElementById('message').value;
+
+    const payload = {
+      username: 'スレッドに返信',
+      content: `名前: ${name}\nメッセージ: ${message}\nスレッド名: ${2}\nIPアドレス: ${ipAddress}`
+    };
+
+    fetch('https://discord.com/api/webhooks/1128503662885478482/QVEGX1BvUN9epl0xxUS1yDocrZCTjNOqJJXTbmtzwSoErzl4HeqjiJSAo2xbiUxpOXvo', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(payload)
+    })
+      .then(response => {
+        if (response.ok) {
+          contactFormContainer.classList.add('hidden'); 
+          successContainer.classList.remove('hidden'); 
+        } else {
+          alert('お問い合わせの送信に失敗しました。');
+        }
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        alert('お問い合わせの送信に失敗しました。');
+      });
+  });
+});
+
+// IPアドレスを取得する関数
+function getIpAddress(callback) {
+  fetch('https://api.ipify.org?format=json')
+    .then(response => response.json())
+    .then(data => {
+      const ipAddress = data.ip;
+      callback(ipAddress);
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      callback('IPアドレスの取得に失敗しました。');
+    });
+}
+</script>
+</section>
+</body>
+</html>

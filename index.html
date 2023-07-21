@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <style>
+            body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+header {
+  background-color: #4285F4;
+  padding: 10px;
+  text-align: center;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+main {
+  padding: 20px;
+  background-color: #f1f1f1;
+}
+
+section {
+  margin-bottom: 20px;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  padding: 10px;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+  color: #4285F4;
+}
+
+.person img {
+  width: 480px;
+  height: 270px; 
+}
+
+/* 画像サイズのやつ */
+img {
+  width: 50%; /* 画像を親要素の幅 */
+  height: auto; /* 高さ調整 */
+}
+
+/* モバイル */
+@media (max-width: 480px) {
+  img {
+    max-width: 100%; /* 画像の最大制限 */
+  }
+}
+@media (max-width: 500px) {
+.container {
+max-width: 100%;
+padding: 10px;
+}
+}
+.blue-date {
+    display: inline-block;
+        padding: 5px 10px;
+        border-radius: 5px;
+        background-color: #007bff;
+        color: white;
+        font-weight: bold;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+    }
+    </style>
+    <meta charset="UTF-8">
+    <title>キッズなんでも掲示板</title>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html">ホーム</a></li>
+          <li><a href="form1.html">お問い合わせ</a></li>
+          <li><a href="news.html">ニュース</a></li>
+          <li><a href="kiyaku.html">利用規約</a></li>
+        </ul>
+      </nav>
+    </header>
+</head>
+<body>
+    <h1>キッズなんでも掲示板</h1>
+    <BR>
+      <section id="スレッドを立てる">
+        <a class="blue-date" href="form.html" target="_blank">スレッドを作成する</a>
+    </section id="スレッドを立てる">  
+    <BR> 
+      <h1>スレッド一覧</h1>
+      <BR>
+                <section>
+          <h1>おれ、かっこよすぎて困ってます</h1>
+          <a href="5.html" target="_blank">おれ、かっこよすぎて困ってますを見る</a>
+        </section> 
+        <section>
+          <h1>皆さんの嫌いな食べ物教えて下さい</h1>
+          <a href="4.html" target="_blank">皆さんの嫌いな食べ物教えて下さいを見る</a>
+        </section> 
+        <section>
+          <h1>山田さくらです。</h1>
+          <a href="3.html" target="_blank">山田さくらです。を見る</a>
+        </section> 
+        <section>
+          <h1>ツイッターよりこれおもろいｗ</h1>
+          <a href="2.html" target="_blank">ツイッターよりこれおもろいｗを見る</a>
+        </section>
+        <section>
+          <h1>ツイ少やばい</h1>
+          <a href="1.html" target="_blank">ツイ少やばいを見る</a>
+        </section> 
+        <script>
+          // 禁止するIPアドレスのリスト
+const bannedIPs = [
+  '127.0.0.1', // 例: ここに禁止したいIPアドレスを追加してください
+  '86.48.13.195'
+];
+
+// IPアドレスを取得する関数
+function getIPAddress() {
+  return fetch('https://api.ipify.org?format=json')
+    .then(response => response.json())
+    .then(data => data.ip)
+    .catch(error => {
+      console.error('IPアドレスの取得に失敗しました:', error);
+      return null;
+    });
+}
+
+// IPアドレスの規制をチェックする関数
+function checkIPBan() {
+  getIPAddress()
+    .then(ipAddress => {
+      if (bannedIPs.includes(ipAddress)) {
+        displayBannedMessage();
+      }
+    });
+}
+
+// 禁止されたメッセージを表示する関数
+function displayBannedMessage() {
+  const bannedMessage = '禁止されていますｗｗｗ';
+  document.body.innerHTML = `<h1>${bannedMessage}</h1>`;
+}
+
+// ページの読み込み完了後にチェックを行う
+window.addEventListener('load', checkIPBan);
+        </script>
+</body>
+</html>
