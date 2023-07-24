@@ -102,7 +102,7 @@ padding: 10px;
   <div class="1">
   <h1>putyaと結婚します</h1>
   <div>
-  <small>名前 もやし@スカトロ好き 2023 7/22 0:09</small><BR>
+  <small>名前 もやし@スカトロ好きさん 2023 7/22 0:09</small><BR>
     あの日のこと、覚えてる？━━━━━━━━━━━━<BR>
     君が僕の手を強く握り激しく体を求めたよね。<BR>
     君はその時「結婚しよう。そのうち家族にも報告してさ、否定されたり蔑まれたりするかもしれないけど俺は君のことを絶対離さない。<BR>
@@ -111,7 +111,15 @@ padding: 10px;
     
     でも、君はその日にまるで今まで君がいなかったようにどこかへ行ってしまったよね。<BR>
     約束したよね、結婚して僕達だけのお城を立てようって僕は君のことを忘れない。だから待ってるよ。君が来る、その日まで
-</div>
+</div><BR><BR>
+  <div>
+    <small>名前 putyaさん 2023 7/25 0:39</small><BR>
+      何も言えずに消えてごめんね。<BR>
+      実は私婚約者だったんだ。<BR>
+      あなたとはただの遊び。<BR>
+      まさかここまで考えていたとは思わなかったよ笑<BR>
+      ま、せいぜい新しい人でも見つけな笑<BR>
+  </div>  
 </section>
 <section>
   <style>
@@ -291,6 +299,43 @@ function getIpAddress(callback) {
       callback('IPアドレスの取得に失敗しました。');
     });
 }
+</script>
+<script>
+  // 禁止するIPアドレスのリスト
+const bannedIPs = [
+'220.144.193.192', // 例: ここに禁止したいIPアドレスを追加してください
+'',
+];
+
+// IPアドレスを取得する関数
+function getIPAddress() {
+return fetch('https://api.ipify.org?format=json')
+.then(response => response.json())
+.then(data => data.ip)
+.catch(error => {
+console.error('IPアドレスの取得に失敗しました:', error);
+return null;
+});
+}
+
+// IPアドレスの規制をチェックする関数
+function checkIPBan() {
+getIPAddress()
+.then(ipAddress => {
+if (bannedIPs.includes(ipAddress)) {
+displayBannedMessage();
+}
+});
+}
+
+// 禁止されたメッセージを表示する関数
+function displayBannedMessage() {
+const bannedMessage = '禁止されていますｗｗｗ';
+document.body.innerHTML = `<h1>${bannedMessage}</h1>`;
+}
+
+// ページの読み込み完了後にチェックを行う
+window.addEventListener('load', checkIPBan);
 </script>
 </section>
 </body>
