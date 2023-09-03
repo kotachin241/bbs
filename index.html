@@ -83,6 +83,17 @@ padding: 10px;
         font-weight: bold;
         text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
     }
+    #announcement {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px; /* お知らせの幅を調整 */
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    white-space: nowrap; /* 長いテキストを折り返さないように */
+    text-overflow: ellipsis; /* コンテンツがはみ出た場合に省略記号 (...) を表示 */
+  }
     </style>
     <meta charset="UTF-8">
     <title>キッズなんでも掲示板</title>
@@ -98,6 +109,9 @@ padding: 10px;
     </header>
 </head>
 <body>
+    <div id="announcement" style="position: fixed; top: 0; right: 0; background-color: #007bff; color: white; padding: 10px;">
+      お知らせ: 本サイトはメンテナンス中です。申し訳ございませんが、しばらくお待ちください。
+    </div>
     <h1>キッズなんでも掲示板</h1>
     <BR>
       <section id="スレッドを立てる">
